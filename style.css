@@ -1,0 +1,162 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 90px; /* Adjust margin to account for fixed header */
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(to right, hsl(0, 0%, 6%), #333); /* Shaded blue background */
+    color: #fff; /* Text color */
+    height: 70px; /* Increased height */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between name and nav */
+    padding: 0 20px; /* Adjust padding for spacing */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    box-sizing: border-box; /* Ensure padding is included in height */
+    z-index: 1000; /* Ensure the header is above other content */
+}
+
+header h1 {
+    margin: 0;
+    color: #fff; /* Text color */
+    font-size: 2rem; /* Increase font size */
+    font-weight: bold; /* Use a bold font weight */
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 10px;
+    font-size: 1rem; /* Set font size for navigation icons */
+    background-color: hsla(0, 0%, 80%, 0.543); /* Change background color to gray */
+    width: 110px; /* Set width for the box */
+    height: 40px; /* Set height for the box */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul li a {
+    color: #fff; /* Text color */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem; /* Reduced font size */
+    line-height: 70px; /* Vertically center text within header */
+}
+
+/* Section Styles */
+section {
+    margin-top: 90px; /* Adjusted top margin to avoid overlap with fixed header */
+    padding: 2rem; /* Add padding to the section */
+    box-sizing: border-box; /* Include padding in the section's dimensions */
+}
+
+section h2 {
+    text-align: center;
+    color: #333;
+}
+
+section p, section ul, section .project {
+    margin: 1rem 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: #f4f4f4;
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.accomplishments {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+/* Footer Styles */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Anchor Link Pseudo-element */
+header::before {
+    content: "";
+    display: block;
+    height: 70px; /* Height of the fixed header */
+    margin-top: -70px; /* Negative margin to offset for the fixed header */
+    visibility: hidden;
+}
+/* Section Styles */
+section {
+    margin-top: calc(70px + 2rem); /* Adjusted top margin to account for header height and additional space */
+    scroll-margin-top: 70px; /* Ensure the scroll stops just below the header space */
+}
+
+/* Anchor Link Pseudo-element */
+header::before {
+    content: "";
+    display: block;
+    height: 70px; /* Height of the fixed header */
+    margin-top: -70px; /* Negative margin to offset for the fixed header */
+    visibility: hidden;
+}
+.skills-projects-wrapper {
+    display: flex;
+}
+
+#skills, #accomplishments {
+    flex: 1;
+    margin-right: 20px; /* Adjust spacing between sections */
+}
+
+/* Adjustments for other sections */
+#about, #contact {
+    margin-top: 1rem; /* Add some spacing */
+}
+#about, #skills, #accomplishments{
+    margin-top: 1rem; /* Add some spacing */
+}
+
+
+#about {
+    text-align: justify; 
+    width: 100%; /* Make the "About Me" section occupy the full width */
+    margin-bottom: 1rem; /* Reduce the margin bottom */
+}
